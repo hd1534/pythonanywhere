@@ -1,11 +1,11 @@
-from . import DB as db
+# from . import DB as db
 import os
 
 # from datetime import datetime
-from sqlalchemy.sql import expression
-from enum import Enum
+# from sqlalchemy.sql import expression
+# from enum import Enum
 
-
+'''
 class Test(db.Model):
     __tablename__ = 'test'
     idx = db.Column(db.Integer,
@@ -29,6 +29,7 @@ def get_all_test():
 
 def delete_test(idx):
     db.session.delete(Test.query.filter_by(idx=idx).first())
+'''
 
 
 def write(data):
