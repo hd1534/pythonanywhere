@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = '3.6'
+
+[packages]
+Flask = "*"
+flask-restplus = "*"
+Flask-JWT-Extended = "*"
+Flask-SQLAlchemy = "*"
+gunicorn = "*"
+requests = "*"
+marshmallow = "*"
+PyMySQL = "*"
+Flask-Migrate = "*"
+jsonify = "*"
+Flask-Cors = "*"
+dimibob = "*"
+Werkzeug = "*"
+"urllib3" = "*"
+Flask-Excel = "*"
+pyexcel-xls = "*"
+pyexcel = "*"
+openpyxl = "*"
+XlsxWriter = "*"
+multiprocess = "*"
+Flask-Uploads = "*"
+pyfcm = "*"
+
+[dev-packages]
