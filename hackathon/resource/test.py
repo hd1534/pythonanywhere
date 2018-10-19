@@ -52,7 +52,7 @@ class Test(Resource):
     @ns.doc(reponses={200: '성공'},
             description='배고파')
     def get(self):
-        return read()
+        return {'data': read()}
 
 
 @ns.route('/')

@@ -4,40 +4,34 @@ import os
 # from datetime import datetime
 # from sqlalchemy.sql import expression
 # from enum import Enum
-
 '''
-class Test(db.Model):
-    __tablename__ = 'test'
-    idx = db.Column(db.Integer,
-                    primary_key=True,
-                    nullable=False,
-                    autoincrement=True)
-    name = db.Column(db.String(100), nullable=False)
+conn = sqlite3.connect("test.db")
 
+# Connection 으로부터 Cursor 생성
+cur = conn.cursor()
 
-def add_test(name):
-    db.session.add(Test(name=name))
+# SQL 쿼리 실행
+cur.execute("select * from customer")
 
+# 데이타 Fetch
+rows = cur.fetchall()
+for row in rows:
+    print(row)
 
-def get_test(idx):
-    return db.session.query.filter_by(idx=idx)
-
-
-def get_all_test():
-    return Test.query.all()
-
-
-def delete_test(idx):
-    db.session.delete(Test.query.filter_by(idx=idx).first())
+# Connection 닫기
+conn.close()
 '''
 
 
 def write(data):
-    f = open(os.environ['DAPP_UPLOAD_FILE'], 'w')
+    f = open('test.txt', 'w')
     f.write(data)
+    print(data)
     f.close()
 
 
 def read():
-    f = open(os.environ['DAPP_UPLOAD_FILE'], 'r')
-    return f.readlines()
+    f = open('test.txt', 'r')
+    data = f.read()
+    print(data)
+    return data

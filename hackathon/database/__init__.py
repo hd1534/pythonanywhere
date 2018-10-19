@@ -4,6 +4,8 @@
 # from hackathon import app
 from hackathon.loader import model_load
 
+import sqlite3
+
 import os
 '''
 DB_NAME = os.environ['DAPP_DB_NAME']
@@ -19,6 +21,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] =\
 DB = SQLAlchemy(app)
 migrate = Migrate(app, DB, compare_type=True)
 '''
+
+
 
 model_load(
     'test'
