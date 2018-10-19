@@ -1,7 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+# from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
 
-from hackathon import app
+# from hackathon import app
 from hackathon.loader import model_load
 
 import os

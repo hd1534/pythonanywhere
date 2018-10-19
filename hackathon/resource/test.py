@@ -1,21 +1,23 @@
 from hackathon.resource import api
-import datetime
+# import datetime
 from flask_restplus import Resource, fields, marshal
+'''
 from flask_jwt_extended import (
     get_jwt_identity,
     jwt_required
 )
-from flask import Flask, send_file
+'''
+# from flask import Flask, send_file
 from hackathon.database.test import (
-    add_test,
-    get_test,
-    delete_test,
-    get_all_test,
+    # add_test,
+    # get_test,
+    # delete_test,
+    # get_all_test,
     write,
     read
 )
 from flask import request
-import xlsxwriter
+# import xlsxwriter
 
 
 ns = api.namespace('test', description='연습을 하자!')
@@ -27,7 +29,7 @@ test_model = ns.model('TestModel', {
 })
 
 
-data_model = ns.model('Data',{
+data_model = ns.model('Data', {
     'data': fields.String(required=True)
 })
 
