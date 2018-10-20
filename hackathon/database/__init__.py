@@ -1,13 +1,10 @@
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
-# from hackathon import app
+from hackathon import app
 from hackathon.loader import model_load
 
-import sqlite3
-
 import os
-'''
 DB_NAME = os.environ['DAPP_DB_NAME']
 DB_USER = os.environ['DAPP_DB_USER']
 DB_PASSWORD = os.environ['DAPP_DB_PASSWORD']
@@ -20,9 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] =\
 
 DB = SQLAlchemy(app)
 migrate = Migrate(app, DB, compare_type=True)
-'''
-
-
 
 model_load(
     'test'

@@ -1,26 +1,34 @@
-# from . import DB as db
+from . import DB as db
 import os
 
 # from datetime import datetime
-# from sqlalchemy.sql import expression
-# from enum import Enum
-'''
-conn = sqlite3.connect("test.db")
+from sqlalchemy.sql import expression
+from enum import Enum
 
-# Connection 으로부터 Cursor 생성
-cur = conn.cursor()
 
-# SQL 쿼리 실행
-cur.execute("select * from customer")
+class Test(db.Model):
+    __tablename__ = 'test'
+    idx = db.Column(db.Integer,
+                    primary_key=True,
+                    nullable=False,
+                    autoincrement=True)
+    name = db.Column(db.String(100), nullable=False)
 
-# 데이타 Fetch
-rows = cur.fetchall()
-for row in rows:
-    print(row)
 
-# Connection 닫기
-conn.close()
-'''
+def add_test(name):
+    db.session.add(Test(name=name))
+
+
+def get_test(idx):
+    return db.session.query.filter_by(idx=idx)
+
+
+def get_all_test():
+    return Test.query.all()
+
+
+def delete_test(idx):
+    db.session.delete(Test.query.filter_by(idx=idx).first())
 
 
 def write(data):
