@@ -17,6 +17,7 @@ class Test(db.Model):
 
 def add_test(name):
     db.session.add(Test(name=name))
+    db.session.commit()
 
 
 def get_test(idx):
@@ -29,6 +30,7 @@ def get_all_test():
 
 def delete_test(idx):
     db.session.delete(Test.query.filter_by(idx=idx).first())
+    db.session.commit()
 
 
 def write(data):

@@ -9,10 +9,10 @@ from flask_jwt_extended import (
 '''
 # from flask import Flask, send_file
 from hackathon.database.test import (
-    # add_test,
-    # get_test,
-    # delete_test,
-    # get_all_test,
+    add_test,
+    get_test,
+    delete_test,
+    get_all_test,
     write,
     read
 )
@@ -62,7 +62,6 @@ class TestResource(Resource):
             description='''배고파''')
     def post(self):
         data = request.get_json()
-        print(data['name'])
         add_test(data['name'])
         return {}, 200
 
